@@ -1,0 +1,139 @@
+/* Reset start */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	text-decoration: none;
+	scroll-behavior: smooth;
+}
+input,
+textarea {
+	outline: 0;
+	&:focus-visible {
+		box-shadow: none !important;
+	}
+}
+ul {
+	list-style: disc;
+	padding-left: 20px;
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+/* Reset end */
+@font-face {
+	font-family: "Barlow";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/barlow/v12/7cHpv4kjgoGqM7E_DMs5ynghnQ.woff2) format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: "Barlow";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3t-4s51ostz0rdg.woff2) format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-image: url("/assets/img/bg.svg");
+	background-color: #222;
+	&,
+	* {
+		color: #fff;
+		font-family: "Barlow", sans-serif;
+	}
+
+	#siteHeader {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		img{
+			width: 150px;
+			height: 150px;
+			object-fit: contain;
+		}
+	}
+
+	#siteMain {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		padding-left: 25px;
+		padding-right: 25px;
+		.card {
+			text-align: center;
+			padding: 30px 20px;
+			h1 {
+				font-weight: 700;
+			}
+			h2 {
+				font-weight: 400;
+			}
+			@media screen and (min-width: 721px) {
+				h1 {
+					font-size: 35px;
+					line-height: 40px;
+					margin-bottom: 20px;
+				}
+				h2 {
+					font-size: 25px;
+					line-height: 30px;
+				}
+			}
+			@media screen and (max-width: 720px) {
+				h1 {
+					font-size: 28px;
+					line-height: 31px;
+					margin-bottom: 15px;
+				}
+				h2 {
+					font-size: 23px;
+					line-height: 26px;
+				}
+			}
+		}
+	}
+
+	#siteFooter {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-top: 120px;
+		img {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+
+.card {
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.32);
+	backdrop-filter: blur(6.5px);
+	border: 2px solid;
+}
+
+a {
+	opacity: 1;
+	transition: opacity 0.3s;
+	&:hover {
+		opacity: 0.7;
+	}
+}
