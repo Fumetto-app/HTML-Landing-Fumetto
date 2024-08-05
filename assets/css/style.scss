@@ -46,7 +46,7 @@ img {
 #app {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: 100dvh;
 	background-image: url("/assets/img/bg.svg");
 	background-color: #222;
 	&,
@@ -104,6 +104,15 @@ img {
 				h2 {
 					font-size: 23px;
 					line-height: 26px;
+				}
+			}
+			p{
+				font-size: 16px;
+				line-height: 16px;
+				font-weight: 400;
+				margin-top: 24px;
+				a{
+					text-decoration: underline;
 				}
 			}
 		}
